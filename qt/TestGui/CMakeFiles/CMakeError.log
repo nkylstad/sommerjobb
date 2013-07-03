@@ -1,0 +1,212 @@
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_WIN’ was not declared in this scope
+make[1]: Leaving directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_WIN
+  cmakeRequireSymbol(0,&Q_WS_WIN);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_QWS’ was not declared in this scope
+make[1]: Leaving directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_QWS
+  cmakeRequireSymbol(0,&Q_WS_QWS);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
+/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_MAC’ was not declared in this scope
+make[1]: Leaving directory `/home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/nkylstad/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_MAC
+  cmakeRequireSymbol(0,&Q_WS_MAC);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_X11 exist failed with the following output:
+Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2093602601/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2093602601.dir/build.make CMakeFiles/cmTryCompileExec2093602601.dir/build
+make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2093602601.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec2093602601.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_X11’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec2093602601.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2093602601/fast] Error 2
+
+File /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1404891913/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1404891913.dir/build.make CMakeFiles/cmTryCompileExec1404891913.dir/build
+make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1404891913.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec1404891913.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec1404891913.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1404891913/fast] Error 2
+
+File /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3341270603/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3341270603.dir/build.make CMakeFiles/cmTryCompileExec3341270603.dir/build
+make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3341270603.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec3341270603.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec3341270603.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3341270603/fast] Error 2
+
+File /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1683388601/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1683388601.dir/build.make CMakeFiles/cmTryCompileExec1683388601.dir/build
+make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1683388601.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec1683388601.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec1683388601.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1683388601/fast] Error 2
+
+File /home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

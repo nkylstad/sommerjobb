@@ -1,0 +1,1 @@
+/home/nina/Dropbox/github/sommerjobb/qt/TestGui/CMakeFiles/TestGui.dir

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+46daddc7ef2928b543bb06439c7f3e6f moc_guiwindow.cxx
+940ec80e640ef8a8779eda8e9bfd0e7b moc_ui_guiwindow.cxx
+691ad0b595e32b4932d4ab7e728b5053 qrc_guiwindow.cxx
+b4f58bc72f3a7f9dc9b7f78143cfb344 ui_guiwindow.h
