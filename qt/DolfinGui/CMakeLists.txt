@@ -15,8 +15,6 @@ file(GLOB QRC_FILES *.qrc)
 # Ignore whitespace in library paths
 cmake_policy(SET CMP0004 OLD)
 cmake_policy(SET CMP0003 NEW)
-#CMAKE_SHARED_LIBRARY_PREFIX()
-
 
 # Get DOLFIN configuration data (DOLFINConfig.cmake must be in DOLFIN_CMAKE_CONFIG_PATH)
 find_package(DOLFIN REQUIRED)

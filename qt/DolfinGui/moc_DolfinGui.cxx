@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'DolfinGui.h'
 **
-** Created: Wed Jul 3 09:03:31 2013
+** Created: Thu Jul 4 10:54:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_DolfinGui[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,16 +32,17 @@ static const uint qt_meta_data_DolfinGui[] = {
 
  // slots: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x08,
-      22,   10,   10,   10, 0x08,
-      35,   10,   10,   10, 0x08,
-      46,   10,   10,   10, 0x08,
+      26,   10,   10,   10, 0x08,
+      37,   10,   10,   10, 0x08,
+      50,   10,   10,   10, 0x08,
+      61,   10,   10,   10, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_DolfinGui[] = {
-    "DolfinGui\0\0plotCube()\0plotSphere()\0"
-    "plotCone()\0updatePlot()\0"
+    "DolfinGui\0\0domainEditor()\0plotCube()\0"
+    "plotSphere()\0plotCone()\0updatePlot()\0"
 };
 
 void DolfinGui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,10 +51,11 @@ void DolfinGui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         Q_ASSERT(staticMetaObject.cast(_o));
         DolfinGui *_t = static_cast<DolfinGui *>(_o);
         switch (_id) {
-        case 0: _t->plotCube(); break;
-        case 1: _t->plotSphere(); break;
-        case 2: _t->plotCone(); break;
-        case 3: _t->updatePlot(); break;
+        case 0: _t->domainEditor(); break;
+        case 1: _t->plotCube(); break;
+        case 2: _t->plotSphere(); break;
+        case 3: _t->plotCone(); break;
+        case 4: _t->updatePlot(); break;
         default: ;
         }
     }
@@ -92,9 +94,9 @@ int DolfinGui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

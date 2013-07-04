@@ -173,9 +173,6 @@ PYTHON_INCLUDE_DIR2:PATH=/usr/include/x86_64-linux-gnu/python2.7
 //Path to a library.
 PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython2.7.so
 
-//The directory containing a CMake configuration file for PythonQt.
-PythonQt_DIR:PATH=PythonQt_DIR-NOTFOUND
-
 //Path to a library.
 QT_ARTHURPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_DEBUG-NOTFOUND
 

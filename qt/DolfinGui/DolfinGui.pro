@@ -18,7 +18,9 @@ SOURCES += main.cpp\
     Plotter.cpp \
     BoundaryMeshFunction.cpp \
     CoordLabel.cpp \
-    CSGGeometryFunction.cpp
+    CSGGeometryFunction.cpp \
+    GeometryInfo.cpp \
+    Cube.cpp
 
 HEADERS  += \
     DolfinGui.h \
@@ -26,7 +28,10 @@ HEADERS  += \
     Plotter.h \
     BoundaryMeshFunction.h \
     CoordLabel.h \
-    CSGGeometryFunction.h
+    CSGGeometryFunction.h \
+    GeometryInfo.h \
+    Geometry.h \
+    Cube.h
 
 FORMS    += dolfingui.ui
 

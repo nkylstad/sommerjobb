@@ -162,6 +162,30 @@ CoordLabel.cpp.s:
 	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/CoordLabel.cpp.s
 .PHONY : CoordLabel.cpp.s
 
+Cube.o: Cube.cpp.o
+.PHONY : Cube.o
+
+# target to build an object file
+Cube.cpp.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/Cube.cpp.o
+.PHONY : Cube.cpp.o
+
+Cube.i: Cube.cpp.i
+.PHONY : Cube.i
+
+# target to preprocess a source file
+Cube.cpp.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/Cube.cpp.i
+.PHONY : Cube.cpp.i
+
+Cube.s: Cube.cpp.s
+.PHONY : Cube.s
+
+# target to generate assembly for a file
+Cube.cpp.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/Cube.cpp.s
+.PHONY : Cube.cpp.s
+
 DolfinGui.o: DolfinGui.cpp.o
 .PHONY : DolfinGui.o
 
@@ -185,6 +209,30 @@ DolfinGui.s: DolfinGui.cpp.s
 DolfinGui.cpp.s:
 	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/DolfinGui.cpp.s
 .PHONY : DolfinGui.cpp.s
+
+GeometryInfo.o: GeometryInfo.cpp.o
+.PHONY : GeometryInfo.o
+
+# target to build an object file
+GeometryInfo.cpp.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o
+.PHONY : GeometryInfo.cpp.o
+
+GeometryInfo.i: GeometryInfo.cpp.i
+.PHONY : GeometryInfo.i
+
+# target to preprocess a source file
+GeometryInfo.cpp.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.i
+.PHONY : GeometryInfo.cpp.i
+
+GeometryInfo.s: GeometryInfo.cpp.s
+.PHONY : GeometryInfo.s
+
+# target to generate assembly for a file
+GeometryInfo.cpp.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.s
+.PHONY : GeometryInfo.cpp.s
 
 PlotWidget.o: PlotWidget.cpp.o
 .PHONY : PlotWidget.o
@@ -306,6 +354,30 @@ moc_CoordLabel.cxx.s:
 	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.s
 .PHONY : moc_CoordLabel.cxx.s
 
+moc_Cube.o: moc_Cube.cxx.o
+.PHONY : moc_Cube.o
+
+# target to build an object file
+moc_Cube.cxx.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o
+.PHONY : moc_Cube.cxx.o
+
+moc_Cube.i: moc_Cube.cxx.i
+.PHONY : moc_Cube.i
+
+# target to preprocess a source file
+moc_Cube.cxx.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Cube.cxx.i
+.PHONY : moc_Cube.cxx.i
+
+moc_Cube.s: moc_Cube.cxx.s
+.PHONY : moc_Cube.s
+
+# target to generate assembly for a file
+moc_Cube.cxx.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Cube.cxx.s
+.PHONY : moc_Cube.cxx.s
+
 moc_DolfinGui.o: moc_DolfinGui.cxx.o
 .PHONY : moc_DolfinGui.o
 
@@ -329,6 +401,54 @@ moc_DolfinGui.s: moc_DolfinGui.cxx.s
 moc_DolfinGui.cxx.s:
 	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.s
 .PHONY : moc_DolfinGui.cxx.s
+
+moc_Geometry.o: moc_Geometry.cxx.o
+.PHONY : moc_Geometry.o
+
+# target to build an object file
+moc_Geometry.cxx.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o
+.PHONY : moc_Geometry.cxx.o
+
+moc_Geometry.i: moc_Geometry.cxx.i
+.PHONY : moc_Geometry.i
+
+# target to preprocess a source file
+moc_Geometry.cxx.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.i
+.PHONY : moc_Geometry.cxx.i
+
+moc_Geometry.s: moc_Geometry.cxx.s
+.PHONY : moc_Geometry.s
+
+# target to generate assembly for a file
+moc_Geometry.cxx.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.s
+.PHONY : moc_Geometry.cxx.s
+
+moc_GeometryInfo.o: moc_GeometryInfo.cxx.o
+.PHONY : moc_GeometryInfo.o
+
+# target to build an object file
+moc_GeometryInfo.cxx.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o
+.PHONY : moc_GeometryInfo.cxx.o
+
+moc_GeometryInfo.i: moc_GeometryInfo.cxx.i
+.PHONY : moc_GeometryInfo.i
+
+# target to preprocess a source file
+moc_GeometryInfo.cxx.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.i
+.PHONY : moc_GeometryInfo.cxx.i
+
+moc_GeometryInfo.s: moc_GeometryInfo.cxx.s
+.PHONY : moc_GeometryInfo.s
+
+# target to generate assembly for a file
+moc_GeometryInfo.cxx.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.s
+.PHONY : moc_GeometryInfo.cxx.s
 
 moc_PlotWidget.o: moc_PlotWidget.cxx.o
 .PHONY : moc_PlotWidget.o
@@ -377,6 +497,30 @@ moc_Plotter.s: moc_Plotter.cxx.s
 moc_Plotter.cxx.s:
 	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.s
 .PHONY : moc_Plotter.cxx.s
+
+moc_PlotterDecorators.o: moc_PlotterDecorators.cxx.o
+.PHONY : moc_PlotterDecorators.o
+
+# target to build an object file
+moc_PlotterDecorators.cxx.o:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o
+.PHONY : moc_PlotterDecorators.cxx.o
+
+moc_PlotterDecorators.i: moc_PlotterDecorators.cxx.i
+.PHONY : moc_PlotterDecorators.i
+
+# target to preprocess a source file
+moc_PlotterDecorators.cxx.i:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.i
+.PHONY : moc_PlotterDecorators.cxx.i
+
+moc_PlotterDecorators.s: moc_PlotterDecorators.cxx.s
+.PHONY : moc_PlotterDecorators.s
+
+# target to generate assembly for a file
+moc_PlotterDecorators.cxx.s:
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.s
+.PHONY : moc_PlotterDecorators.cxx.s
 
 moc_ui_dolfingui.o: moc_ui_dolfingui.cxx.o
 .PHONY : moc_ui_dolfingui.o
@@ -441,9 +585,15 @@ help:
 	@echo "... CoordLabel.o"
 	@echo "... CoordLabel.i"
 	@echo "... CoordLabel.s"
+	@echo "... Cube.o"
+	@echo "... Cube.i"
+	@echo "... Cube.s"
 	@echo "... DolfinGui.o"
 	@echo "... DolfinGui.i"
 	@echo "... DolfinGui.s"
+	@echo "... GeometryInfo.o"
+	@echo "... GeometryInfo.i"
+	@echo "... GeometryInfo.s"
 	@echo "... PlotWidget.o"
 	@echo "... PlotWidget.i"
 	@echo "... PlotWidget.s"
@@ -459,15 +609,27 @@ help:
 	@echo "... moc_CoordLabel.o"
 	@echo "... moc_CoordLabel.i"
 	@echo "... moc_CoordLabel.s"
+	@echo "... moc_Cube.o"
+	@echo "... moc_Cube.i"
+	@echo "... moc_Cube.s"
 	@echo "... moc_DolfinGui.o"
 	@echo "... moc_DolfinGui.i"
 	@echo "... moc_DolfinGui.s"
+	@echo "... moc_Geometry.o"
+	@echo "... moc_Geometry.i"
+	@echo "... moc_Geometry.s"
+	@echo "... moc_GeometryInfo.o"
+	@echo "... moc_GeometryInfo.i"
+	@echo "... moc_GeometryInfo.s"
 	@echo "... moc_PlotWidget.o"
 	@echo "... moc_PlotWidget.i"
 	@echo "... moc_PlotWidget.s"
 	@echo "... moc_Plotter.o"
 	@echo "... moc_Plotter.i"
 	@echo "... moc_Plotter.s"
+	@echo "... moc_PlotterDecorators.o"
+	@echo "... moc_PlotterDecorators.i"
+	@echo "... moc_PlotterDecorators.s"
 	@echo "... moc_ui_dolfingui.o"
 	@echo "... moc_ui_dolfingui.i"
 	@echo "... moc_ui_dolfingui.s"

@@ -1,17 +1,17 @@
 Determining if the Q_WS_WIN exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec963407373/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec963407373.dir/build.make CMakeFiles/cmTryCompileExec963407373.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3496797237/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3496797237.dir/build.make CMakeFiles/cmTryCompileExec3496797237.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec963407373.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec963407373.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec963407373.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec963407373/fast] Error 2
+make: *** [cmTryCompileExec3496797237/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -31,17 +31,17 @@ int main(int argc, char** argv)
 Determining if the Q_WS_QWS exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3071040360/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3071040360.dir/build.make CMakeFiles/cmTryCompileExec3071040360.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec263161318/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec263161318.dir/build.make CMakeFiles/cmTryCompileExec263161318.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3071040360.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3071040360.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec3071040360.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3071040360/fast] Error 2
+make: *** [cmTryCompileExec263161318/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -61,17 +61,17 @@ int main(int argc, char** argv)
 Determining if the Q_WS_MAC exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1073723665/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1073723665.dir/build.make CMakeFiles/cmTryCompileExec1073723665.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3558604081/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3558604081.dir/build.make CMakeFiles/cmTryCompileExec3558604081.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1073723665.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1073723665.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec1073723665.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec1073723665/fast] Error 2
+make: *** [cmTryCompileExec3558604081/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */

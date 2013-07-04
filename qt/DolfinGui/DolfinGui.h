@@ -6,8 +6,12 @@
 #include "CoordLabel.h"
 #include "BoundaryMeshFunction.h"
 #include "Plotter.h"
+#include "GeometryInfo.h"
+#include "Cube.h"
 #include <dolfin.h>
 #include <PythonQt/PythonQt.h>
+#include <boost/lexical_cast.hpp>
+#include <string>
 
 namespace Ui {
 class DolfinGui;
@@ -26,7 +30,7 @@ private slots:
     //void sphere();
     //void cube();
     //void cone();
-    //void domainEditor();
+    void domainEditor();
     //void boundaryEditor();
     //void clear();
     void plotCube();
@@ -36,17 +40,32 @@ private slots:
 
 private:
     Ui::DolfinGui *ui;
-    void updateCube(double x0, double x1, double x2,
-                  double y0, double y1, double y2);
+    void updateCube();
     void createToolBar();
     void createActions();
     void createStartLayout();
-    void updateLayout();
     void connectPlotter();
+    void updatePlotWindow();
+    void addInfoBox(QGroupBox *box);
+    QGroupBox* createCubeInfoBox();
+
+    const boost::shared_ptr<dolfin::CSGGeometry> generateCube(
+           double *points);
+
+    const boost::shared_ptr<dolfin::CSGGeometry> generateCone(
+            double c00, double c01, double c02,
+            double c10, double c11, double c12,
+            double r0, double r1);
+
+    const boost::shared_ptr<dolfin::CSGGeometry> generateSphere(
+            double c0, double c1, double c2,
+            double r);
 
     void plotGeometry(const boost::shared_ptr<dolfin::CSGGeometry> geometry);
     //void createStatusBar();
     //void renderDisplay();
+
+    boost::shared_ptr<dolfin::CSGGeometry> g3d;
 
     QWidget *plotWindow;
     QWidget *window;
@@ -72,6 +91,7 @@ private:
     QBoxLayout *geometryBoxLayout;
     QBoxLayout *sublayout2;
     QBoxLayout *centralLayout;
+    QBoxLayout *infoLayout;
 
     Plotter *plotter;
     QPushButton *cubePlot;
@@ -89,12 +109,18 @@ private:
     QRadioButton *intersectButton;
 
     QGroupBox *geometryOperatorBox;
+    QGroupBox *cubeInfoBox;
 
     //QSplitter *bottomSplitter;
     QSplitter *mainSplitter;
 
     QToolBar *toolBar;
     QMenu *fileMenu;
+
+    bool madePlot;
+    bool cubeSelected;
+    bool domainInitialized;
+    bool cubeInfoDisplayed;
 
 };
 

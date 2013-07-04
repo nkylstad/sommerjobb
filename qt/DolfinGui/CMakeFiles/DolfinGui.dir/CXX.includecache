@@ -16,6 +16,10 @@ QObject
 QLabel
 -
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.h
+Geometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.cpp
 DolfinGui.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
@@ -31,9 +35,25 @@ BoundaryMeshFunction.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/BoundaryMeshFunction.h
 Plotter.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Plotter.h
+GeometryInfo.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+Cube.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.h
 dolfin.h
 -
 PythonQt/PythonQt.h
+-
+boost/lexical_cast.hpp
+-
+string
+-
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+QObject
+-
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+QObject
 -
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.h
