@@ -20,7 +20,11 @@ SOURCES += main.cpp\
     CoordLabel.cpp \
     CSGGeometryFunction.cpp \
     GeometryInfo.cpp \
-    Cube.cpp
+    Cube.cpp \
+    Cone.cpp \
+    CubeGeometry.cpp \
+    ConeGeometry.cpp \
+    SphereGeometry.cpp
 
 HEADERS  += \
     DolfinGui.h \
@@ -31,7 +35,11 @@ HEADERS  += \
     CSGGeometryFunction.h \
     GeometryInfo.h \
     Geometry.h \
-    Cube.h
+    Cube.h \
+    Cone.h \
+    CubeGeometry.h \
+    ConeGeometry.h \
+    SphereGeometry.h
 
 FORMS    += dolfingui.ui
 

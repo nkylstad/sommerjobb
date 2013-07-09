@@ -1,17 +1,51 @@
+Determining if the Q_WS_X11 exist failed with the following output:
+Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3423340504/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3423340504.dir/build.make CMakeFiles/cmTryCompileExec3423340504.dir/build
+make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3423340504.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec3423340504.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_X11’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec3423340504.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3423340504/fast] Error 2
+
+File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
 Determining if the Q_WS_WIN exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3496797237/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3496797237.dir/build.make CMakeFiles/cmTryCompileExec3496797237.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3121851080/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3121851080.dir/build.make CMakeFiles/cmTryCompileExec3121851080.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec3121851080.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec3121851080.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec3496797237.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec3121851080.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3496797237/fast] Error 2
+make: *** [cmTryCompileExec3121851080/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -31,17 +65,19 @@ int main(int argc, char** argv)
 Determining if the Q_WS_QWS exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec263161318/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec263161318.dir/build.make CMakeFiles/cmTryCompileExec263161318.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec2074424592/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2074424592.dir/build.make CMakeFiles/cmTryCompileExec2074424592.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec2074424592.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec2074424592.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec263161318.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec263161318/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec2074424592.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec2074424592/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -61,17 +97,19 @@ int main(int argc, char** argv)
 Determining if the Q_WS_MAC exist failed with the following output:
 Change Dir: /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3558604081/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3558604081.dir/build.make CMakeFiles/cmTryCompileExec3558604081.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec2590525796/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2590525796.dir/build.make CMakeFiles/cmTryCompileExec2590525796.dir/build
 make[1]: Entering directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec2590525796.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -DMPICH_IGNORE_CXX_SEEK  -Wno-deprecated   -frounding-math  -fopenmp   -I/usr/include/qt5    -o CMakeFiles/cmTryCompileExec2590525796.dir/CheckSymbolExists.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+In file included from /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:0:
+/usr/include/qt5/QtCore/qglobal.h:1079:4: error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC or -fPIE."
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec3558604081.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec2590525796.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3558604081/fast] Error 2
+make: *** [cmTryCompileExec2590525796/fast] Error 2
 
 File /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */

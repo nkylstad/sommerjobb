@@ -57,53 +57,63 @@ ui_dolfingui.h: dolfingui.ui
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ui_dolfingui.h"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/uic -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ui_dolfingui.h /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/dolfingui.ui
 
-moc_Geometry.cxx: Geometry.h
+moc_ConeGeometry.cxx: ConeGeometry.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_ConeGeometry.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ConeGeometry.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.h
+
+moc_Geometry.cxx: Geometry.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_Geometry.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Geometry.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
 
+moc_SphereGeometry.cxx: SphereGeometry.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_SphereGeometry.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_SphereGeometry.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.h
+
 moc_DolfinGui.cxx: DolfinGui.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_DolfinGui.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_DolfinGui.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
 
 moc_ui_dolfingui.cxx: ui_dolfingui.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_ui_dolfingui.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ui_dolfingui.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ui_dolfingui.h
 
 moc_CoordLabel.cxx: CoordLabel.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_CoordLabel.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CoordLabel.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CoordLabel.h
 
 moc_PlotterDecorators.cxx: PlotterDecorators.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_PlotterDecorators.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_PlotterDecorators.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotterDecorators.h
 
 moc_PlotWidget.cxx: PlotWidget.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_PlotWidget.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_PlotWidget.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.h
 
-moc_Cube.cxx: Cube.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_Cube.cxx"
-	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Cube.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.h
+moc_CubeGeometry.cxx: CubeGeometry.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_CubeGeometry.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CubeGeometry.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.h
 
 moc_BoundaryMeshFunction.cxx: BoundaryMeshFunction.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_BoundaryMeshFunction.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_BoundaryMeshFunction.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/BoundaryMeshFunction.h
 
 moc_GeometryInfo.cxx: GeometryInfo.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_GeometryInfo.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_GeometryInfo.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
 
 moc_Plotter.cxx: Plotter.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_Plotter.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc -I/home/nina/Work/FEniCS/include -I/usr/include/libxml2 -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS -I/home/nina/Work/FEniCS/include -I/usr/include/suitesparse -I/usr/include/suitesparse -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include -I/usr/include -I/usr/include -I/home/nina/Work/FEniCS/lib/cmake/Trilinos/../../../include/trilinos -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include/trilinos -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/home/nina/Work/FEniCS/include -I/home/nina/Work/FEniCS/include -I/usr/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/qt4 -I/usr/local/include/vtk-5.10 -I/usr/include/python2.7 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/local/include/vtk-5.10 -DDOLFIN_VERSION=\"1.2.0\" -DBOOST_UBLAS_NDEBUG -DHAS_HDF5 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_FORTIFY_SOURCE=2 -DHAS_TRILINOS -DHAS_SLEPC -DHAS_PETSC -DHAS_UMFPACK -DHAS_CHOLMOD -DHAS_SCOTCH -DHAS_PARMETIS -DHAS_CGAL -DCGAL_DISABLE_ROUNDING_MATH_CHECK -DHAS_ZLIB -DHAS_CPPUNIT -DHAS_MPI -DHAS_OPENMP -DHAS_QT4 -DHAS_VTK -DHAS_QVTK -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DQT_GUI_LIB -DQT_CORE_LIB -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_AND_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_OR_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_BIT_XOR_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_DIVIDES_HPP_INCLUDED -DBOOST_TT_HAS_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_GREATER_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_LEFT_SHIFT_HPP_INCLUDED -DBOOST_TT_HAS_LESS_EQUAL_HPP_INCLUDED -DBOOST_TT_HAS_LESS_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_AND_HPP_INCLUDED -DBOOST_TT_HAS_LOGICAL_OR_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MINUS_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MODULUS_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_MULTIPLIES_HPP_INCLUDED -DBOOST_TT_HAS_NOT_EQUAL_TO_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_PLUS_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_ASSIGN_HPP_INCLUDED -DBOOST_TT_HAS_RIGHT_SHIFT_HPP_INCLUDED -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Plotter.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Plotter.h
 
@@ -123,36 +133,13 @@ qrc_DolfinGui.cxx: testing.py
 qrc_DolfinGui.cxx: UpdatePlot.py
 qrc_DolfinGui.cxx: DolfinGui.qrc.depends
 qrc_DolfinGui.cxx: DolfinGui.qrc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating qrc_DolfinGui.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/rcc -name DolfinGui -o /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/qrc_DolfinGui.cxx /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.qrc
 
-CMakeFiles/DolfinGui.dir/Cube.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
-CMakeFiles/DolfinGui.dir/Cube.cpp.o: Cube.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/Cube.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/Cube.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.cpp
-
-CMakeFiles/DolfinGui.dir/Cube.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/Cube.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.cpp > CMakeFiles/DolfinGui.dir/Cube.cpp.i
-
-CMakeFiles/DolfinGui.dir/Cube.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/Cube.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.cpp -o CMakeFiles/DolfinGui.dir/Cube.cpp.s
-
-CMakeFiles/DolfinGui.dir/Cube.cpp.o.requires:
-.PHONY : CMakeFiles/DolfinGui.dir/Cube.cpp.o.requires
-
-CMakeFiles/DolfinGui.dir/Cube.cpp.o.provides: CMakeFiles/DolfinGui.dir/Cube.cpp.o.requires
-	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/Cube.cpp.o.provides.build
-.PHONY : CMakeFiles/DolfinGui.dir/Cube.cpp.o.provides
-
-CMakeFiles/DolfinGui.dir/Cube.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/Cube.cpp.o
-
 CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o: PlotWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.cpp
 
@@ -175,7 +162,7 @@ CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o.provides.build: CMakeFiles/DolfinGui.d
 
 CMakeFiles/DolfinGui.dir/Plotter.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/Plotter.cpp.o: Plotter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/Plotter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/Plotter.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Plotter.cpp
 
@@ -196,9 +183,32 @@ CMakeFiles/DolfinGui.dir/Plotter.cpp.o.provides: CMakeFiles/DolfinGui.dir/Plotte
 
 CMakeFiles/DolfinGui.dir/Plotter.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/Plotter.cpp.o
 
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o: ConeGeometry.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.cpp
+
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.cpp > CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.i
+
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.cpp -o CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.s
+
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.requires
+
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.provides: CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.provides
+
+CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o
+
 CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o: BoundaryMeshFunction.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/BoundaryMeshFunction.cpp
 
@@ -221,7 +231,7 @@ CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o.provides.build: CMakeFiles/D
 
 CMakeFiles/DolfinGui.dir/main.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/main.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/main.cpp
 
@@ -244,7 +254,7 @@ CMakeFiles/DolfinGui.dir/main.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/mai
 
 CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o: GeometryInfo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.cpp
 
@@ -265,9 +275,32 @@ CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o.provides: CMakeFiles/DolfinGui.dir/G
 
 CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o
 
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o: CubeGeometry.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.cpp
+
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.cpp > CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.i
+
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.cpp -o CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.s
+
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.requires
+
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.provides: CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.provides
+
+CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o
+
 CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o: DolfinGui.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.cpp
 
@@ -290,7 +323,7 @@ CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o.provides.build: CMakeFiles/DolfinGui.di
 
 CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o: CoordLabel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CoordLabel.cpp
 
@@ -311,9 +344,55 @@ CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o.provides: CMakeFiles/DolfinGui.dir/Coo
 
 CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o
 
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o: SphereGeometry.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.cpp
+
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.cpp > CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.i
+
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.cpp -o CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.s
+
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.requires
+
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.provides: CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.provides
+
+CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.provides.build: CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o: moc_ConeGeometry.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_25)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ConeGeometry.cxx
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ConeGeometry.cxx > CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.i
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ConeGeometry.cxx -o CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.s
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.requires
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.provides: CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.provides
+
+CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o
+
 CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o: moc_Geometry.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Geometry.cxx
 
@@ -334,9 +413,32 @@ CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o.provides: CMakeFiles/DolfinGui.dir/m
 
 CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o
 
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o: moc_SphereGeometry.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_SphereGeometry.cxx
+
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_SphereGeometry.cxx > CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.i
+
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_SphereGeometry.cxx -o CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.s
+
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.requires
+
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.provides: CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.provides
+
+CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o
+
 CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o: moc_DolfinGui.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_DolfinGui.cxx
 
@@ -359,7 +461,7 @@ CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o.provides.build: CMakeFiles/DolfinGu
 
 CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o: moc_ui_dolfingui.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ui_dolfingui.cxx
 
@@ -382,7 +484,7 @@ CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o.provides.build: CMakeFiles/Dolfi
 
 CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o: moc_CoordLabel.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CoordLabel.cxx
 
@@ -405,7 +507,7 @@ CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o.provides.build: CMakeFiles/DolfinG
 
 CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o: moc_PlotterDecorators.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_PlotterDecorators.cxx
 
@@ -428,7 +530,7 @@ CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o.provides.build: CMakeFiles/
 
 CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o: moc_PlotWidget.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_PlotWidget.cxx
 
@@ -449,32 +551,32 @@ CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o.provides: CMakeFiles/DolfinGui.dir
 
 CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o: moc_Cube.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_27)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Cube.cxx
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o: moc_CubeGeometry.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_33)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CubeGeometry.cxx
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/moc_Cube.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Cube.cxx > CMakeFiles/DolfinGui.dir/moc_Cube.cxx.i
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CubeGeometry.cxx > CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.i
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/moc_Cube.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Cube.cxx -o CMakeFiles/DolfinGui.dir/moc_Cube.cxx.s
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CubeGeometry.cxx -o CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.s
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.requires:
-.PHONY : CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.requires
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.requires:
+.PHONY : CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.requires
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.provides: CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.requires
-	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.provides.build
-.PHONY : CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.provides
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.provides: CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.requires
+	$(MAKE) -f CMakeFiles/DolfinGui.dir/build.make CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.provides.build
+.PHONY : CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.provides
 
-CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o
+CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.provides.build: CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o
 
 CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o: moc_BoundaryMeshFunction.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_BoundaryMeshFunction.cxx
 
@@ -497,7 +599,7 @@ CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o.provides.build: CMakeFil
 
 CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o: moc_GeometryInfo.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_GeometryInfo.cxx
 
@@ -520,7 +622,7 @@ CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o.provides.build: CMakeFiles/Dolfi
 
 CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o: moc_Plotter.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Plotter.cxx
 
@@ -543,7 +645,7 @@ CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o.provides.build: CMakeFiles/DolfinGui.
 
 CMakeFiles/DolfinGui.dir/qrc_DolfinGui.cxx.o: CMakeFiles/DolfinGui.dir/flags.make
 CMakeFiles/DolfinGui.dir/qrc_DolfinGui.cxx.o: qrc_DolfinGui.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DolfinGui.dir/qrc_DolfinGui.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DolfinGui.dir/qrc_DolfinGui.cxx.o -c /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/qrc_DolfinGui.cxx
 
@@ -566,21 +668,25 @@ CMakeFiles/DolfinGui.dir/qrc_DolfinGui.cxx.o.provides.build: CMakeFiles/DolfinGu
 
 # Object files for target DolfinGui
 DolfinGui_OBJECTS = \
-"CMakeFiles/DolfinGui.dir/Cube.cpp.o" \
 "CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o" \
 "CMakeFiles/DolfinGui.dir/Plotter.cpp.o" \
+"CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o" \
 "CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o" \
 "CMakeFiles/DolfinGui.dir/main.cpp.o" \
 "CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o" \
+"CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o" \
 "CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o" \
 "CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o" \
+"CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o" \
+"CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o" \
+"CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o" \
-"CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o" \
+"CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o" \
 "CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o" \
@@ -589,21 +695,25 @@ DolfinGui_OBJECTS = \
 # External object files for target DolfinGui
 DolfinGui_EXTERNAL_OBJECTS =
 
-DolfinGui: CMakeFiles/DolfinGui.dir/Cube.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/Plotter.cpp.o
+DolfinGui: CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/main.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o
+DolfinGui: CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o
 DolfinGui: CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o
+DolfinGui: CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o
+DolfinGui: CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o
+DolfinGui: CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o
-DolfinGui: CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o
+DolfinGui: CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o
 DolfinGui: CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o
@@ -838,21 +948,25 @@ DolfinGui: CMakeFiles/DolfinGui.dir/link.txt
 CMakeFiles/DolfinGui.dir/build: DolfinGui
 .PHONY : CMakeFiles/DolfinGui.dir/build
 
-CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/Cube.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/PlotWidget.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/Plotter.cpp.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/ConeGeometry.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/BoundaryMeshFunction.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/main.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/GeometryInfo.cpp.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/CubeGeometry.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/DolfinGui.cpp.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/CoordLabel.cpp.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/SphereGeometry.cpp.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_ConeGeometry.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_Geometry.cxx.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_SphereGeometry.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_DolfinGui.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_ui_dolfingui.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_CoordLabel.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_PlotterDecorators.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_PlotWidget.cxx.o.requires
-CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_Cube.cxx.o.requires
+CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_CubeGeometry.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_BoundaryMeshFunction.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_GeometryInfo.cxx.o.requires
 CMakeFiles/DolfinGui.dir/requires: CMakeFiles/DolfinGui.dir/moc_Plotter.cxx.o.requires
@@ -864,13 +978,15 @@ CMakeFiles/DolfinGui.dir/clean:
 .PHONY : CMakeFiles/DolfinGui.dir/clean
 
 CMakeFiles/DolfinGui.dir/depend: ui_dolfingui.h
+CMakeFiles/DolfinGui.dir/depend: moc_ConeGeometry.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_Geometry.cxx
+CMakeFiles/DolfinGui.dir/depend: moc_SphereGeometry.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_DolfinGui.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_ui_dolfingui.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_CoordLabel.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_PlotterDecorators.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_PlotWidget.cxx
-CMakeFiles/DolfinGui.dir/depend: moc_Cube.cxx
+CMakeFiles/DolfinGui.dir/depend: moc_CubeGeometry.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_BoundaryMeshFunction.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_GeometryInfo.cxx
 CMakeFiles/DolfinGui.dir/depend: moc_Plotter.cxx

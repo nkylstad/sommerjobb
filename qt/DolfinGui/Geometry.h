@@ -2,6 +2,15 @@
 #define GEOMETRY_H
 
 #include <QObject>
+#include <QtGui>
+#include <iostream>
+#include "CoordLabel.h"
+#include "BoundaryMeshFunction.h"
+#include "Plotter.h"
+#include <boost/shared_ptr.hpp>
+#include <boost/ptr_container/ptr_list.hpp>
+
+class DolfinGui;
 
 class Geometry : public QObject
 {
@@ -9,46 +18,113 @@ class Geometry : public QObject
 
 public:
 
-    virtual void setPoints(double *points) {
+    virtual ~Geometry() {}
+
+    void setPoints(double *points) {
         pointList = points;
     }
 
-    virtual void setRadius(double *radius) {
+    void setRadius(double *radius) {
         radiusList = radius;
     }
 
-    virtual void setPointCount(int pCount) {
+    void setPointCount(int pCount) {
         pointCount = pCount;
     }
 
-    virtual void setRadiusCount(int rCount) {
+    void setRadiusCount(int rCount) {
         radiusCount = rCount;
     }
 
-    virtual int getPointCount() {
+    int getPointCount() {
         return pointCount;
     }
 
-    virtual int getRadiusCount() {
+    int getRadiusCount() {
         return radiusCount;
     }
 
-    virtual double* getPoints() {
+    double* getPoints() {
         return pointList;
     }
 
-    virtual double* getRadius() {
+    double* getRadius() {
         return radiusList;
     }
 
-    virtual void init() { };
+    void setGeometryPointer(boost::shared_ptr<dolfin::CSGGeometry> geometry) {
+        geometryPointer = geometry;
+    }
+
+    const boost::shared_ptr<dolfin::CSGGeometry> getGeometryPointer(){
+        return geometryPointer;
+    }
+
+    bool isCreated() {
+        return created;
+    }
+
+    void setCreated(bool c) {
+        created = c;
+    }
+
+    bool getSelected() {
+        return selected;
+    }
+
+    void setSelected(bool isSelected) {
+        selected = isSelected;
+    }
+
+    QGroupBox* getInfoBox() {
+        return infoBox;
+    }
+
+    void setInfoBox(QGroupBox *box) {
+        infoBox = box;
+    }
+
+    int operator==(const Geometry &rhs) const {
+        if (this->geometryPointer != rhs.geometryPointer) return 0;
+        return 1;
+    }
+
+    void setGuiWindow(DolfinGui *ui){
+        guiWindow = ui;
+    }
+
+    DolfinGui* getGuiWindow(){
+        return guiWindow;
+    }
+
+    // To be implemented in each geometry
+    virtual void init(DolfinGui *ui) = 0;
+
+    virtual void createInfoBox() = 0;
+
+    QGroupBox *infoBox;
+
+
+public slots:
+
+    virtual void updateClicked() = 0;
+
 
 private:
+
     int pointCount;  // number of points defined in geometry
     int radiusCount;  // number of radius values defined in geometry
 
     double *pointList;
     double *radiusList;
+
+    boost::shared_ptr<dolfin::CSGGeometry> geometryPointer;
+
+    DolfinGui *guiWindow;
+
+    bool created;
+    bool selected;
+
 };
 
 

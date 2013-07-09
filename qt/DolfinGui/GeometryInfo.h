@@ -1,37 +1,40 @@
 #ifndef GEOMETRYINFO_H
 #define GEOMETRYINFO_H
 
-#include <QObject>
+//#include <QObject>
+#include "Geometry.h"
+#include <vector>
+using namespace std;
 
 class GeometryInfo : public QObject
 {
     Q_OBJECT
 
 public:
-    GeometryInfo(int count);
+    explicit GeometryInfo();
 
-    int getDataCount();
+    int getGeometryCount();
 
-    void setDataList(double *list);
+    void setGeometryCount(int count);
 
-    double *dataList;
+    void addedGeometry();
+
+    void removedGeometry();
+
+    void addGeometry(Geometry *g);
+
+    vector<Geometry *> getList();
+
+    vector<Geometry *>::iterator getIterator();
+
+    void removeGeometry(Geometry *g);
 
 private:
 
-    int dataCount;
+    vector<Geometry *> geometryList;
+    vector<Geometry *>::iterator geometryListIterator;
+    int geometryCount;
 
 };
-
-class GeometryInfoDecorator : public QObject
-{
-    Q_OBJECT
-
-public slots:
-
-    GeometryInfo* new_GeometryInfo(int count){ return new GeometryInfo(count); }
-
-    void setDataList(GeometryInfo *info, double *list) { info->setDataList(list); }
-};
-
 
 #endif // GEOMETRYINFO_H

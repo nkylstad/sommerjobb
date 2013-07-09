@@ -1,18 +1,52 @@
 #include "GeometryInfo.h"
 
 // Constructor
-GeometryInfo::GeometryInfo(int count)
+GeometryInfo::GeometryInfo()
     : QObject()
 {
-    dataCount = count;
+    geometryCount = 0;
 }
-//------------------------------------------------------------
-int GeometryInfo::getDataCount()
+//-------------------------------------------------------------
+int GeometryInfo::getGeometryCount()
 {
-    return dataCount;
+    return geometryCount;
 }
-//------------------------------------------------------------
-void GeometryInfo::setDataList(double *list)
+//-------------------------------------------------------------
+void GeometryInfo::setGeometryCount(int count)
 {
-    dataList = list;
+    geometryCount = count;
+}
+//-------------------------------------------------------------
+void GeometryInfo::addedGeometry()
+{
+    geometryCount += 1;
+}
+//-------------------------------------------------------------
+void GeometryInfo::removedGeometry()
+{
+    geometryCount -= 1;
+}
+//-------------------------------------------------------------
+void GeometryInfo::addGeometry(Geometry *g){
+    geometryList.push_back(g);
+    addedGeometry();
+}
+//-------------------------------------------------------------
+
+void GeometryInfo::removeGeometry(Geometry *g)
+{
+    //geometryList.remove(g);
+    //removedGeometry();
+}
+
+//-------------------------------------------------------------
+vector<Geometry *> GeometryInfo::getList()
+{
+    return geometryList;
+}
+//-------------------------------------------------------------
+
+vector<Geometry *>::iterator GeometryInfo::getIterator()
+{
+    return geometryListIterator;
 }

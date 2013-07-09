@@ -12,11 +12,15 @@ dolfin.h
 QObject
 -
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.h
+Geometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CoordLabel.h
 QLabel
 -
 
-/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.h
 Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
 
@@ -25,35 +29,43 @@ DolfinGui.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
-QtGui
--
 ui_dolfingui.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ui_dolfingui.h
+GeometryInfo.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+CubeGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.h
+ConeGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.h
+SphereGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.h
+dolfin.h
+-
+PythonQt/PythonQt.h
+-
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+QObject
+-
+QtGui
+-
+iostream
+-
 CoordLabel.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CoordLabel.h
 BoundaryMeshFunction.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/BoundaryMeshFunction.h
 Plotter.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Plotter.h
-GeometryInfo.h
-/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
-Cube.h
-/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Cube.h
-dolfin.h
+boost/shared_ptr.hpp
 -
-PythonQt/PythonQt.h
--
-boost/lexical_cast.hpp
--
-string
+boost/ptr_container/ptr_list.hpp
 -
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
-QObject
--
-
-/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
-QObject
+vector
 -
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.h
@@ -71,6 +83,10 @@ dolfin/plot/VTKPlottableCSGGeometry.h
 -
 PlotWidget.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.h
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.h
+Geometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ui_dolfingui.h
 QtCore/QVariant

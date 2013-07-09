@@ -1,17 +1,13 @@
 #ifndef DOLFINGUI_H
 #define DOLFINGUI_H
 
-#include <QtGui>
 #include "ui_dolfingui.h"
-#include "CoordLabel.h"
-#include "BoundaryMeshFunction.h"
-#include "Plotter.h"
 #include "GeometryInfo.h"
-#include "Cube.h"
+#include "CubeGeometry.h"
+#include "ConeGeometry.h"
+#include "SphereGeometry.h"
 #include <dolfin.h>
 #include <PythonQt/PythonQt.h>
-#include <boost/lexical_cast.hpp>
-#include <string>
 
 namespace Ui {
 class DolfinGui;
@@ -25,6 +21,14 @@ public:
     explicit DolfinGui(QWidget *parent = 0);
     ~DolfinGui();
 
+    void updatePlot();
+    void updateCube(CubeGeometry *cube);
+    void updateCone(ConeGeometry *cone);
+    void updateSphere(SphereGeometry *sphere);
+
+    bool cubeSelected;
+    bool coneSelected;
+    bool sphereSelected;
     
 private slots:
     //void sphere();
@@ -36,11 +40,15 @@ private slots:
     void plotCube();
     void plotSphere();
     void plotCone();
-    void updatePlot();
+    //void updateSphere();
 
 private:
     Ui::DolfinGui *ui;
-    void updateCube();
+    void plotCube(CubeGeometry *cube);
+    void plotCone(ConeGeometry *cone);
+    void plotSphere(SphereGeometry *sphere);
+
+
     void createToolBar();
     void createActions();
     void createStartLayout();
@@ -48,24 +56,24 @@ private:
     void updatePlotWindow();
     void addInfoBox(QGroupBox *box);
     QGroupBox* createCubeInfoBox();
+    QGroupBox* createConeInfoBox();
+    QGroupBox* createSphereInfoBox();
 
     const boost::shared_ptr<dolfin::CSGGeometry> generateCube(
-           double *points);
+           double *points, double *radius = 0);
 
     const boost::shared_ptr<dolfin::CSGGeometry> generateCone(
-            double c00, double c01, double c02,
-            double c10, double c11, double c12,
-            double r0, double r1);
+            double *points, double *radius);
 
     const boost::shared_ptr<dolfin::CSGGeometry> generateSphere(
-            double c0, double c1, double c2,
-            double r);
+            double *points, double *radius);
 
-    void plotGeometry(const boost::shared_ptr<dolfin::CSGGeometry> geometry);
+    void plotGeometry();
     //void createStatusBar();
     //void renderDisplay();
 
     boost::shared_ptr<dolfin::CSGGeometry> g3d;
+    GeometryInfo *combinedGeometry;
 
     QWidget *plotWindow;
     QWidget *window;
@@ -110,6 +118,8 @@ private:
 
     QGroupBox *geometryOperatorBox;
     QGroupBox *cubeInfoBox;
+    QGroupBox *coneInfoBox;
+    QGroupBox *sphereInfoBox;
 
     //QSplitter *bottomSplitter;
     QSplitter *mainSplitter;
@@ -118,9 +128,9 @@ private:
     QMenu *fileMenu;
 
     bool madePlot;
-    bool cubeSelected;
+
     bool domainInitialized;
-    bool cubeInfoDisplayed;
+    bool updateRequested;
 
 };
 

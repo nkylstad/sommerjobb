@@ -14,8 +14,11 @@ DolfinGui::DolfinGui(QWidget *parent) :
     createToolBar();
     createStartLayout();
     domainInitialized = false;
-    cubeInfoDisplayed = false;
-
+    cubeSelected = false;
+    coneSelected = false;
+    sphereSelected = false;
+    updateRequested = false;
+    combinedGeometry = new GeometryInfo();
 }
 //----------------------------------------------------------------------------
 void DolfinGui::createStartLayout()
@@ -69,38 +72,31 @@ void DolfinGui::createStartLayout()
     setMinimumSize(QSize(900,500));
 }
 //----------------------------------------------------------------------------
-const boost::shared_ptr<CSGGeometry> DolfinGui::generateCube(double *points)
+const boost::shared_ptr<dolfin::CSGGeometry> DolfinGui::generateCube(double *points,
+                                                                     double *radius)
 {
+    // Use CSG primitive Box
     Box *box = new Box(points[0],points[1],points[2],
             points[3],points[4],points[5]);
     return boost::shared_ptr<CSGGeometry>(box);
 }
 //----------------------------------------------------------------------------
-const boost::shared_ptr<CSGGeometry> DolfinGui::generateCone(double c00, double c01, double c02,
-                             double c10, double c11, double c12, double r0, double r1)
+const boost::shared_ptr<CSGGeometry> DolfinGui::generateCone(double *points,
+                                                             double *radius)
 {
-    Cone *cone = new Cone(Point(c00,c01,c02), Point(c10,c11,c12), r0, r1);
+    // Use CSG primitive Cone
+    Cone *cone = new Cone(Point(points[0],points[1],points[2]),
+            Point(points[3],points[4],points[5]), radius[0], radius[1]);
     return boost::shared_ptr<CSGGeometry>(cone);
 }
 //----------------------------------------------------------------------------
-const boost::shared_ptr<CSGGeometry> DolfinGui::generateSphere(double c0, double c1, double c2,
-                                                               double r)
+const boost::shared_ptr<CSGGeometry> DolfinGui::generateSphere(double *points,
+                                                               double *radius)
 {
-    Sphere *sphere = new Sphere(Point(c0, c1, c2), r);
+    // Use CSG primitive Sphere
+    Sphere *sphere = new Sphere(Point(points[0], points[1], points[2]),
+            radius[0]);
     return boost::shared_ptr<CSGGeometry>(sphere);
-}
-//----------------------------------------------------------------------------
-void DolfinGui::plotCube()
-{
-    double points[6] = {0,0,0,1,1,1};
-    g3d = generateCube(points);
-    updatePlotWindow();
-    plotter->plot(g3d);
-
-    if (!cubeInfoDisplayed)
-        cubeInfoBox = createCubeInfoBox();
-        addInfoBox(cubeInfoBox);
-        cubeInfoDisplayed = true;
 }
 //----------------------------------------------------------------------------
 void DolfinGui::addInfoBox(QGroupBox *box)
@@ -109,129 +105,183 @@ void DolfinGui::addInfoBox(QGroupBox *box)
     centralLayout->update();
 }
 //----------------------------------------------------------------------------
-QGroupBox* DolfinGui::createCubeInfoBox()
+void DolfinGui::plotGeometry()
 {
-    QGroupBox *infoBox = new QGroupBox;
-    infoBox->setTitle(tr("Cube details"));
+    if (!updateRequested) {
+        for (auto geometry : combinedGeometry->getList())
+            g3d = g3d + geometry->getGeometryPointer();
+    } else {
 
-    QLabel *corner1 = new QLabel(tr("First corner coordinates"));
-    QLabel *corner2 = new QLabel(tr("Second corner coordinates"));
-    QLabel *x0 = new QLabel(tr("x:"));
-    QLabel *x1 = new QLabel(tr("x:"));
-    QLabel *y0 = new QLabel(tr("y:"));
-    QLabel *y1 = new QLabel(tr("y:"));
-    QLabel *z0 = new QLabel(tr("z:"));
-    QLabel *z1 = new QLabel(tr("z:"));
+    //g3d = g3d + (* combinedGeometry->getList().begin())->getGeometryPointer();
+    plotter->plot(g3d);
+    updateRequested = false;
+}
+//----------------------------------------------------------------------------
+void DolfinGui::plotCube()
+{
+    CubeGeometry *cube = new CubeGeometry(this);
+    plotCube(cube);
+}
+//----------------------------------------------------------------------------
+void DolfinGui::plotCube(CubeGeometry *cube)
+{
+    if (!(cube->isCreated())) {
+        // Create default cube
+        //double points[6] = {0,0,0,1,1,1};
+        //cube->setPoints(points);
+        cube->getPoints()[0] = 0;
+        cube->getPoints()[1] = 0;
+        cube->getPoints()[2] = 0;
+        cube->getPoints()[3] = 1;
+        cube->getPoints()[4] = 1;
+        cube->getPoints()[5] = 1;
+        cube->createInfoBox();
+        addInfoBox(cube->getInfoBox());
+        cube->setCreated(true);
+    }
+    cube->setGeometryPointer(generateCube(cube->getPoints()));
+    combinedGeometry->addGeometry(cube);
 
-    QLineEdit *cubeEdit0 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit1 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit2 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit3 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit4 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit5 = new QLineEdit(infoBox);
-
-    cubeEdit0->setObjectName("cubeEdit0");
-    cubeEdit1->setObjectName("cubeEdit1");
-    cubeEdit2->setObjectName("cubeEdit2");
-    cubeEdit3->setObjectName("cubeEdit3");
-    cubeEdit4->setObjectName("cubeEdit4");
-    cubeEdit5->setObjectName("cubeEdit5");
-
-    x0->setBuddy(cubeEdit0);
-    y0->setBuddy(cubeEdit1);
-    z0->setBuddy(cubeEdit2);
-    x1->setBuddy(cubeEdit3);
-    y1->setBuddy(cubeEdit4);
-    z1->setBuddy(cubeEdit5);
-
-    cubeEdit0->setText("0.0");
-    cubeEdit1->setText("0.0");
-    cubeEdit2->setText("0.0");
-    cubeEdit3->setText("1.0");
-    cubeEdit4->setText("1.0");
-    cubeEdit5->setText("1.0");
-
-    QBoxLayout *topInfoLayout = new QHBoxLayout();
-    QBoxLayout *bottomInfoLayout = new QHBoxLayout();
-
-    topInfoLayout->addWidget(x0);
-    topInfoLayout->addWidget(cubeEdit0);
-    topInfoLayout->addWidget(y0);
-    topInfoLayout->addWidget(cubeEdit1);
-    topInfoLayout->addWidget(z0);
-    topInfoLayout->addWidget(cubeEdit2);
-
-    bottomInfoLayout->addWidget(x1);
-    bottomInfoLayout->addWidget(cubeEdit3);
-    bottomInfoLayout->addWidget(y1);
-    bottomInfoLayout->addWidget(cubeEdit4);
-    bottomInfoLayout->addWidget(z1);
-    bottomInfoLayout->addWidget(cubeEdit5);
-
-    QBoxLayout *cubeInfoLayout = new QVBoxLayout();
-    cubeInfoLayout->addWidget(corner1);
-    cubeInfoLayout->addLayout(topInfoLayout);
-    cubeInfoLayout->addWidget(corner2);
-    cubeInfoLayout->addLayout(bottomInfoLayout);
-
-    updateButton = new QPushButton(tr("Update"));
-    cubeSelected = true;
-    connect(updateButton, SIGNAL(clicked()), this, SLOT(updatePlot()));
-
-    cubeInfoLayout->addWidget(updateButton);
-
-    infoBox->setLayout(cubeInfoLayout);
-    infoBox->setMaximumSize(QSize(200,200));
-
-    return infoBox;
+    //g3d = cube->getGeometryPointer();
+    updatePlotWindow();
+    plotGeometry();
+    //plotter->plot(g3d);
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotCone()
 {
-    g3d = generateCone(0,0,-1,0,0,1,0.1,0.5);
+    ConeGeometry *cone = new ConeGeometry(this);
+    plotCone(cone);
+}
+//----------------------------------------------------------------------------
+void DolfinGui::plotCone(ConeGeometry *cone)
+{
+    if (!cone->isCreated()){
+        std::cout << "Creating new cone" << std::endl;
+        double points[6] = {0, 0, -1, 0, 0, 1};
+        double radius[2] = {0.5, 0.5};
+        cone->setPoints(points);
+        cone->setRadius(radius);
+        cone->createInfoBox();
+        addInfoBox(cone->getInfoBox());
+        cone->setCreated(true);
+    }
+    cone->setGeometryPointer(generateCone(cone->getPoints(), cone->getRadius()));
+    //g3d = generateCone(cone->getPoints(), cone->getRadius());
     updatePlotWindow();
-    plotter->plot(g3d);
+    plotter->plot(generateCone(cone->getPoints(), cone->getRadius()));
 
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotSphere()
 {
-    g3d = generateSphere(0,0,0,0.3);
-    updatePlotWindow();
+    SphereGeometry *sphere = new SphereGeometry(this);
+    plotSphere(sphere);
+}
+//----------------------------------------------------------------------------
+void DolfinGui::plotSphere(SphereGeometry *sphere)
+{
+    if (!sphere->isCreated()){
+        int p = sphere->getPointCount();
+        int r = sphere->getRadiusCount();
+        double points[3] = {0.0, 0.0, 0.0};
+        double radius[1] = {0.5};
+        sphere->setPoints(points);
+        sphere->setRadius(radius);
+        sphere->createInfoBox();
+        addInfoBox(sphere->getInfoBox());
+        sphere->setCreated(true);
+    }
+
+    sphere->setGeometryPointer(generateSphere(sphere->getPoints(), sphere->getRadius()));
+    g3d = generateSphere(sphere->getPoints(), sphere->getRadius());
     plotter->plot(g3d);
 }
 //----------------------------------------------------------------------------
-void DolfinGui::updateCube()
+void DolfinGui::updateCube(CubeGeometry *cube)
 {
     // Set up arrays to hold information about corner points
-    /*GeometryInfo *cubeInfo = new GeometryInfo(6);
-    double dataList[cubeInfo->getDataCount()];
-    cubeInfo->setDataList(dataList);*/
+    //GeometryInfo *cubeInfo = new GeometryInfo(6);
+    //double dataList[cube->getPointCount()];
+    //cube->setPoints(dataList);
 
-    Cube *cubeGeometry = new Cube();
-    double list[cubeGeometry->getPointCount()];
-    cubeGeometry->setPoints(list);
+    updateRequested = true;
+    std::cout << "In method updateCube(): \n";
+    std::cout << "-------- HELLO!!! --------" << std::endl;
+    //for (int i=0; i<6; ++i)
+    //    std::cout << cube->getPoints()[i] << " " << std::endl;
 
-    // Use python script to obtain values for corner points
-
+    // Use python script to obtain new values for corner points
     PythonQtObjectPtr mainModule = PythonQt::self()->getMainModule();
-    //mainModule.addObject("cubeGeometry", cubeGeometry);
-
-    mainModule.addObject("cubeInfoBox", cubeInfoBox);
-    for (int i=0; i<cubeGeometry->getPointCount(); ++i)
-        cubeGeometry->getPoints()[i] = mainModule.evalScript(QString("eval(cubeInfoBox.cubeEdit%1.text)").arg(i),
+    mainModule.addObject("cubeInfoBox", cube->getInfoBox());
+    for (int i=0; i<cube->getPointCount(); ++i){
+        cube->getPoints()[i] = mainModule.evalScript(QString("eval(cubeInfoBox.cubeEdit%1.text)").arg(i),
                                             Py_eval_input).toDouble();
 
-    g3d = generateCube(cubeGeometry->getPoints());
-    updatePlotWindow();
-    plotter->plot(g3d);
+    }
+    plotCube(cube);
+    cubeSelected = false;
+}
+//----------------------------------------------------------------------------
+void DolfinGui::updateCone(ConeGeometry *cone){
 
+    std::cout << "In method updateCone(): \n";
+    std::cout << "-------- HELLO!!! --------" << std::endl;
+
+    for (int i=0; i<6; ++i)
+        std::cout << cone->getPoints()[i] << " " << std::endl;
+
+    // Use python script to obtain values for corner points
+    PythonQtObjectPtr mainModule = PythonQt::self()->getMainModule();
+    mainModule.addObject("coneInfoBox", cone->getInfoBox());
+    for (int i=0; i<cone->getPointCount(); ++i)
+        cone->getPoints()[i] = mainModule.evalScript(QString("eval(coneInfoBox.coneEdit%1.text)").arg(i),
+                                            Py_eval_input).toDouble();
+
+    // Use python script to obtain values for radius
+    for (int i=0; i<cone->getRadiusCount(); ++i)
+        cone->getRadius()[i] = mainModule.evalScript(QString("eval(coneInfoBox.radiusEdit%1.text)").arg(i),
+                                            Py_eval_input).toDouble();
+
+    plotCone(cone);
+    std::cout << "Ferdig" << std::endl;
+    //coneSelected = false;
+}
+//----------------------------------------------------------------------------
+void DolfinGui::updateSphere(SphereGeometry *sphere){
+
+    std::cout << "In method updateSphere(): \n";
+    std::cout << "-------- HELLO!!! --------" << std::endl;
+
+    // Use python script to obtain values for corner points
+    PythonQtObjectPtr mainModule = PythonQt::self()->getMainModule();
+    mainModule.addObject("sphereInfoBox", sphere->getInfoBox());
+    for (int i=0; i<sphere->getPointCount(); ++i)
+        sphere->getPoints()[i] = mainModule.evalScript(QString("eval(sphereInfoBox.sphereEdit%1.text)").arg(i),
+                                            Py_eval_input).toDouble();
+
+    // Use python script to obtain values for radius
+    for (int i=0; i<sphere->getRadiusCount(); ++i)
+        sphere->getRadius()[i] = mainModule.evalScript(QString("eval(sphereInfoBox.radiusEdit%1.text)").arg(i),
+                                            Py_eval_input).toDouble();
+
+    plotSphere(sphere);
+    sphereSelected = false;
 }
 //----------------------------------------------------------------------------
 void DolfinGui::updatePlot()
 {
+    std::cout << "In method updatePlot(): \n";
+    std::cout << "-------- HELLO!!! --------" << std::endl;
     if (cubeSelected){
-        updateCube();
+        std::cout << "Cube is selected\n";
+        //updateCube();
+    } else if (coneSelected){
+        std::cout << "Cone is selected\n";
+        //updateCone();
+    } else if (sphereSelected){
+        std::cout << "Sphere is selected\n";
+        //updateSphere();
     }
 }
 //----------------------------------------------------------------------------
@@ -315,7 +365,7 @@ void DolfinGui::domainEditor()
     //updateButton->setVisible(true);
     // Create a default start geometry for the plotter
     Box *box = new Box(0,0,0,1,1,1);
-    const boost::shared_ptr<CSGGeometry> g3d = boost::shared_ptr<CSGGeometry>(box);
+    g3d = boost::shared_ptr<CSGGeometry>(box);
 
     // Create plotter:
     plotter = new Plotter(g3d);
