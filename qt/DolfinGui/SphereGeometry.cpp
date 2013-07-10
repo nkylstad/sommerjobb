@@ -12,12 +12,18 @@ void SphereGeometry::init(DolfinGui *ui)
     setRadiusCount(1);
     setCreated(false);
     setGuiWindow(ui);
+    setMyType("Sphere");
 }
 //--------------------------------------------------
-void SphereGeometry::createInfoBox()
+void SphereGeometry::setDefaultValues(){
+    //Implement later
+}
+//--------------------------------------------------
+QGroupBox *SphereGeometry::createInfoBox()
 {
     infoBox = new QGroupBox;
     infoBox->setTitle(tr("Sphere details"));
+    infoBox->setObjectName(tr("infoBox"));
 
     QLabel *center1 = new QLabel(tr("Centre"));
     QLabel *r0 = new QLabel(tr("r:"));
@@ -25,35 +31,32 @@ void SphereGeometry::createInfoBox()
     QLabel *y0 = new QLabel(tr("y:"));
     QLabel *z0 = new QLabel(tr("z:"));
 
-    QLineEdit *sphereEdit0 = new QLineEdit(infoBox);
-    QLineEdit *sphereEdit1 = new QLineEdit(infoBox);
-    QLineEdit *sphereEdit2 = new QLineEdit(infoBox);
-    QLineEdit *radiusEdit0 = new QLineEdit(infoBox);
+    pointEdit0 = new QLineEdit(infoBox);
+    pointEdit1 = new QLineEdit(infoBox);
+    pointEdit2 = new QLineEdit(infoBox);
+    radiusEdit0 = new QLineEdit(infoBox);
 
-    sphereEdit0->setObjectName("sphereEdit0");
-    sphereEdit1->setObjectName("sphereEdit1");
-    sphereEdit2->setObjectName("sphereEdit2");
+    pointEdit0->setObjectName("pointEdit0");
+    pointEdit1->setObjectName("pointEdit1");
+    pointEdit2->setObjectName("pointEdit2");
     radiusEdit0->setObjectName("radiusEdit0");
 
-    x0->setBuddy(sphereEdit0);
-    y0->setBuddy(sphereEdit1);
-    z0->setBuddy(sphereEdit2);
+    x0->setBuddy(pointEdit0);
+    y0->setBuddy(pointEdit1);
+    z0->setBuddy(pointEdit2);
     r0->setBuddy(radiusEdit0);
 
-    sphereEdit0->setText("0.0");
-    sphereEdit1->setText("0.0");
-    sphereEdit2->setText("-1.0");
-    radiusEdit0->setText("0.5");
+    updateInfoBox();
 
     QBoxLayout *topInfoLayout = new QVBoxLayout();
 
     topInfoLayout->addWidget(center1);
     topInfoLayout->addWidget(x0);
-    topInfoLayout->addWidget(sphereEdit0);
+    topInfoLayout->addWidget(pointEdit0);
     topInfoLayout->addWidget(y0);
-    topInfoLayout->addWidget(sphereEdit1);
+    topInfoLayout->addWidget(pointEdit1);
     topInfoLayout->addWidget(z0);
-    topInfoLayout->addWidget(sphereEdit2);
+    topInfoLayout->addWidget(pointEdit2);
     topInfoLayout->addWidget(r0);
     topInfoLayout->addWidget(radiusEdit0);
 
@@ -67,7 +70,18 @@ void SphereGeometry::createInfoBox()
 
     infoBox->setLayout(sphereInfoLayout);
     infoBox->setMaximumSize(QSize(200,250));
+
+    return infoBox;
 }
+
+void SphereGeometry::updateInfoBox()
+{
+    pointEdit0->setText("0.0");
+    pointEdit1->setText("0.0");
+    pointEdit2->setText("-1.0");
+    radiusEdit0->setText("0.5");
+}
+
 //--------------------------------------------------
 void SphereGeometry::updateClicked()
 {

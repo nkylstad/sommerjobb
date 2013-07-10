@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'DolfinGui.h'
 **
-** Created: Tue Jul 9 13:41:43 2013
+** Created: Wed Jul 10 10:52:26 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

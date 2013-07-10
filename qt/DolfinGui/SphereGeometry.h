@@ -15,7 +15,18 @@ public:
 
     virtual void updateClicked();
 
-    virtual void createInfoBox();
+    virtual QGroupBox* createInfoBox();
+
+    virtual void updateInfoBox();
+
+    virtual void setDefaultValues();
+
+private:
+
+    QLineEdit *pointEdit0;
+    QLineEdit *pointEdit1;
+    QLineEdit *pointEdit2;
+    QLineEdit *radiusEdit0;
 };
 
 

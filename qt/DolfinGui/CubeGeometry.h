@@ -19,13 +19,21 @@ public:
 
     virtual void updateClicked();
 
-    virtual void createInfoBox();
+    virtual QGroupBox* createInfoBox();
+
+    virtual void updateInfoBox();
+
+    virtual void setDefaultValues();
 
 
-//private:
+private:
 
-
-
+    QLineEdit *pointEdit0;
+    QLineEdit *pointEdit1;
+    QLineEdit *pointEdit2;
+    QLineEdit *pointEdit3;
+    QLineEdit *pointEdit4;
+    QLineEdit *pointEdit5;
 };
 
 #endif // CUBE_H

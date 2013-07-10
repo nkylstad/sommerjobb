@@ -12,6 +12,12 @@ dolfin.h
 QObject
 -
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.cpp
+ConeGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.h
+DolfinGui.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
+
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ConeGeometry.h
 Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
@@ -19,6 +25,12 @@ Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CoordLabel.h
 QLabel
 -
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.cpp
+CubeGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.h
+DolfinGui.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/CubeGeometry.h
 Geometry.h
@@ -62,6 +74,10 @@ boost/shared_ptr.hpp
 boost/ptr_container/ptr_list.hpp
 -
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.cpp
+GeometryInfo.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
 Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
@@ -84,9 +100,39 @@ dolfin/plot/VTKPlottableCSGGeometry.h
 PlotWidget.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/PlotWidget.h
 
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.cpp
+SphereGeometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.h
+DolfinGui.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
+
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/SphereGeometry.h
 Geometry.h
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/main.cpp
+DolfinGui.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
+QApplication
+-
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_ConeGeometry.cxx
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_CubeGeometry.cxx
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_DolfinGui.cxx
+DolfinGui.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/DolfinGui.h
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_Geometry.cxx
+Geometry.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/Geometry.h
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_GeometryInfo.cxx
+GeometryInfo.h
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/GeometryInfo.h
+
+/home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/moc_SphereGeometry.cxx
 
 /home/nina/Dropbox/github/sommerjobb/qt/DolfinGui/ui_dolfingui.h
 QtCore/QVariant

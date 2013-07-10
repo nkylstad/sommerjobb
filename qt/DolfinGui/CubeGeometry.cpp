@@ -10,15 +10,33 @@ void CubeGeometry::init(DolfinGui *ui)
 {
     setPointCount(6);
     setRadiusCount(0);
+    setDefaultValues();
     setCreated(false);
     setGuiWindow(ui);
-    setPoints(new double[6]);
+    setMyType("Cube");
+
+    for (int i=0; i<6; ++i){
+        std::cout << i << ": " << getPoints()[i] << std::endl;
+    }
 }
+
+void CubeGeometry::setDefaultValues()
+{
+    setPoints(new double[6]);
+    getPoints()[0] = 0;
+    getPoints()[1] = 0;
+    getPoints()[2] = 0;
+    getPoints()[3] = 1;
+    getPoints()[4] = 1;
+    getPoints()[5] = 1;
+}
+
 //----------------------------------------------------------------------------
-void CubeGeometry::createInfoBox()
+QGroupBox *CubeGeometry::createInfoBox()
 {
     infoBox = new QGroupBox;
     infoBox->setTitle(tr("Cube details"));
+    infoBox->setObjectName(tr("infoBox"));
 
     QLabel *corner1 = new QLabel(tr("Corner 1"));
     QLabel *corner2 = new QLabel(tr("Corner 2"));
@@ -29,50 +47,46 @@ void CubeGeometry::createInfoBox()
     QLabel *z0 = new QLabel(tr("z:"));
     QLabel *z1 = new QLabel(tr("z:"));
 
-    QLineEdit *cubeEdit0 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit1 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit2 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit3 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit4 = new QLineEdit(infoBox);
-    QLineEdit *cubeEdit5 = new QLineEdit(infoBox);
+    pointEdit0 = new QLineEdit(infoBox);
+    pointEdit1 = new QLineEdit(infoBox);
+    pointEdit2 = new QLineEdit(infoBox);
+    pointEdit3 = new QLineEdit(infoBox);
+    pointEdit4 = new QLineEdit(infoBox);
+    pointEdit5 = new QLineEdit(infoBox);
 
-    cubeEdit0->setObjectName("cubeEdit0");
-    cubeEdit1->setObjectName("cubeEdit1");
-    cubeEdit2->setObjectName("cubeEdit2");
-    cubeEdit3->setObjectName("cubeEdit3");
-    cubeEdit4->setObjectName("cubeEdit4");
-    cubeEdit5->setObjectName("cubeEdit5");
+    pointEdit0->setObjectName("pointEdit0");
+    pointEdit1->setObjectName("pointEdit1");
+    pointEdit2->setObjectName("pointEdit2");
+    pointEdit3->setObjectName("pointEdit3");
+    pointEdit4->setObjectName("pointEdit4");
+    pointEdit5->setObjectName("pointEdit5");
 
-    x0->setBuddy(cubeEdit0);
-    y0->setBuddy(cubeEdit1);
-    z0->setBuddy(cubeEdit2);
-    x1->setBuddy(cubeEdit3);
-    y1->setBuddy(cubeEdit4);
-    z1->setBuddy(cubeEdit5);
+    x0->setBuddy(pointEdit0);
+    y0->setBuddy(pointEdit1);
+    z0->setBuddy(pointEdit2);
+    x1->setBuddy(pointEdit3);
+    y1->setBuddy(pointEdit4);
+    z1->setBuddy(pointEdit5);
 
-    cubeEdit0->setText(QString::number(getPoints()[0]));
-    cubeEdit1->setText(QString::number(getPoints()[1]));
-    cubeEdit2->setText("0.0");
-    cubeEdit3->setText("1.0");
-    cubeEdit4->setText("1.0");
-    cubeEdit5->setText("1.0");
+    updateInfoBox();
+
 
     QBoxLayout *topInfoLayout = new QHBoxLayout();
     QBoxLayout *bottomInfoLayout = new QHBoxLayout();
 
     topInfoLayout->addWidget(x0);
-    topInfoLayout->addWidget(cubeEdit0);
+    topInfoLayout->addWidget(pointEdit0);
     topInfoLayout->addWidget(y0);
-    topInfoLayout->addWidget(cubeEdit1);
+    topInfoLayout->addWidget(pointEdit1);
     topInfoLayout->addWidget(z0);
-    topInfoLayout->addWidget(cubeEdit2);
+    topInfoLayout->addWidget(pointEdit2);
 
     bottomInfoLayout->addWidget(x1);
-    bottomInfoLayout->addWidget(cubeEdit3);
+    bottomInfoLayout->addWidget(pointEdit3);
     bottomInfoLayout->addWidget(y1);
-    bottomInfoLayout->addWidget(cubeEdit4);
+    bottomInfoLayout->addWidget(pointEdit4);
     bottomInfoLayout->addWidget(z1);
-    bottomInfoLayout->addWidget(cubeEdit5);
+    bottomInfoLayout->addWidget(pointEdit5);
 
     QBoxLayout *cubeInfoLayout = new QVBoxLayout();
     cubeInfoLayout->addWidget(corner1);
@@ -88,9 +102,22 @@ void CubeGeometry::createInfoBox()
 
     infoBox->setLayout(cubeInfoLayout);
     infoBox->setMaximumSize(QSize(200,200));
+
+    return infoBox;
 }
+
+void CubeGeometry::updateInfoBox()
+{
+    pointEdit0->setText(QString::number(getPoints()[0]));
+    pointEdit1->setText(QString::number(getPoints()[1]));
+    pointEdit2->setText(QString::number(getPoints()[2]));
+    pointEdit3->setText(QString::number(getPoints()[3]));
+    pointEdit4->setText(QString::number(getPoints()[4]));
+    pointEdit5->setText(QString::number(getPoints()[5]));
+}
+
 //----------------------------------------------------------------------------
 void CubeGeometry::updateClicked()
 {
-    getGuiWindow()->updateCube(this);
+    getGuiWindow()->updateGeometry(this);
 }

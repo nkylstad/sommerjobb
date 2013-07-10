@@ -14,12 +14,18 @@ void ConeGeometry::init(DolfinGui *ui)
     setGuiWindow(ui);
     setPoints(new double[getPointCount()]);
     setPoints(new double[getRadiusCount()]);
+    setMyType("Cone");
 }
 //-------------------------------------------------------------
-void ConeGeometry::createInfoBox()
+void ConeGeometry::setDefaultValues(){
+    //Implement later
+}
+//-------------------------------------------------------------
+QGroupBox *ConeGeometry::createInfoBox()
 {
     infoBox = new QGroupBox;
     infoBox->setTitle(tr("Cone details"));
+    infoBox->setObjectName(tr("infoBox"));
 
     QLabel *center1 = new QLabel(tr("Centre 1"));
     QLabel *center2 = new QLabel(tr("Centre 2"));
@@ -32,62 +38,55 @@ void ConeGeometry::createInfoBox()
     QLabel *z0 = new QLabel(tr("z:"));
     QLabel *z1 = new QLabel(tr("z:"));
 
-    QLineEdit *coneEdit0 = new QLineEdit(infoBox);
-    QLineEdit *coneEdit1 = new QLineEdit(infoBox);
-    QLineEdit *coneEdit2 = new QLineEdit(infoBox);
-    QLineEdit *coneEdit3 = new QLineEdit(infoBox);
-    QLineEdit *coneEdit4 = new QLineEdit(infoBox);
-    QLineEdit *coneEdit5 = new QLineEdit(infoBox);
-    QLineEdit *radiusEdit0 = new QLineEdit(infoBox);
-    QLineEdit *radiusEdit1 = new QLineEdit(infoBox);
+    pointEdit0 = new QLineEdit(infoBox);
+    pointEdit1 = new QLineEdit(infoBox);
+    pointEdit2 = new QLineEdit(infoBox);
+    pointEdit3 = new QLineEdit(infoBox);
+    pointEdit4 = new QLineEdit(infoBox);
+    pointEdit5 = new QLineEdit(infoBox);
+    radiusEdit0 = new QLineEdit(infoBox);
+    radiusEdit1 = new QLineEdit(infoBox);
 
-    coneEdit0->setObjectName("coneEdit0");
-    coneEdit1->setObjectName("coneEdit1");
-    coneEdit2->setObjectName("coneEdit2");
-    coneEdit3->setObjectName("coneEdit3");
-    coneEdit4->setObjectName("coneEdit4");
-    coneEdit5->setObjectName("coneEdit5");
+    pointEdit0->setObjectName("pointEdit0");
+    pointEdit1->setObjectName("pointEdit1");
+    pointEdit2->setObjectName("pointEdit2");
+    pointEdit3->setObjectName("pointEdit3");
+    pointEdit4->setObjectName("pointEdit4");
+    pointEdit5->setObjectName("pointEdit5");
     radiusEdit0->setObjectName("radiusEdit0");
     radiusEdit1->setObjectName("radiusEdit1");
 
-    x0->setBuddy(coneEdit0);
-    y0->setBuddy(coneEdit1);
-    z0->setBuddy(coneEdit2);
-    x1->setBuddy(coneEdit3);
-    y1->setBuddy(coneEdit4);
-    z1->setBuddy(coneEdit5);
+    x0->setBuddy(pointEdit0);
+    y0->setBuddy(pointEdit1);
+    z0->setBuddy(pointEdit2);
+    x1->setBuddy(pointEdit3);
+    y1->setBuddy(pointEdit4);
+    z1->setBuddy(pointEdit5);
     r0->setBuddy(radiusEdit0);
     r1->setBuddy(radiusEdit1);
 
-    coneEdit0->setText(QString::number(getPoints()[0]));
-    coneEdit1->setText("0.0");
-    coneEdit2->setText("-1.0");
-    coneEdit3->setText("0.0");
-    coneEdit4->setText("0.0");
-    coneEdit5->setText("1.0");
-    radiusEdit0->setText("0.5");
-    radiusEdit1->setText("0.5");
+
 
     QBoxLayout *topInfoLayout = new QVBoxLayout();
     QBoxLayout *bottomInfoLayout = new QVBoxLayout();
 
     topInfoLayout->addWidget(center1);
     topInfoLayout->addWidget(x0);
-    topInfoLayout->addWidget(coneEdit0);
+    topInfoLayout->addWidget(pointEdit0);
     topInfoLayout->addWidget(y0);
-    topInfoLayout->addWidget(coneEdit1);
+    topInfoLayout->addWidget(pointEdit1);
     topInfoLayout->addWidget(z0);
-    topInfoLayout->addWidget(coneEdit2);
+    topInfoLayout->addWidget(pointEdit2);
     topInfoLayout->addWidget(r0);
     topInfoLayout->addWidget(radiusEdit0);
 
     bottomInfoLayout->addWidget(center2);
     bottomInfoLayout->addWidget(x1);
-    bottomInfoLayout->addWidget(coneEdit3);
+    bottomInfoLayout->addWidget(pointEdit3);
     bottomInfoLayout->addWidget(y1);
-    bottomInfoLayout->addWidget(coneEdit4);
+    bottomInfoLayout->addWidget(pointEdit4);
     bottomInfoLayout->addWidget(z1);
-    bottomInfoLayout->addWidget(coneEdit5);
+    bottomInfoLayout->addWidget(pointEdit5);
     bottomInfoLayout->addWidget(r1);
     bottomInfoLayout->addWidget(radiusEdit1);
 
@@ -102,7 +101,22 @@ void ConeGeometry::createInfoBox()
 
     infoBox->setLayout(coneInfoLayout);
     infoBox->setMaximumSize(QSize(200,250));
+
+    return infoBox;
 }
+
+void ConeGeometry::updateInfoBox()
+{
+    pointEdit0->setText(QString::number(getPoints()[0]));
+    pointEdit1->setText("0.0");
+    pointEdit2->setText("-1.0");
+    pointEdit3->setText("0.0");
+    pointEdit4->setText("0.0");
+    pointEdit5->setText("1.0");
+    radiusEdit0->setText("0.5");
+    radiusEdit1->setText("0.5");
+}
+
 //-------------------------------------------------------------
 void ConeGeometry::updateClicked()
 {

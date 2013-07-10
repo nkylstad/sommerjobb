@@ -21,10 +21,11 @@ public:
     explicit DolfinGui(QWidget *parent = 0);
     ~DolfinGui();
 
-    void updatePlot();
+
     void updateCube(CubeGeometry *cube);
     void updateCone(ConeGeometry *cone);
     void updateSphere(SphereGeometry *sphere);
+    void updateGeometry(Geometry *geometry);
 
     bool cubeSelected;
     bool coneSelected;
@@ -35,6 +36,7 @@ private slots:
     //void cube();
     //void cone();
     void domainEditor();
+    void updatePlot();
     //void boundaryEditor();
     //void clear();
     void plotCube();
@@ -59,8 +61,11 @@ private:
     QGroupBox* createConeInfoBox();
     QGroupBox* createSphereInfoBox();
 
+    const boost::shared_ptr<dolfin::CSGGeometry> generateGeometry(
+           Geometry *geometry);
+
     const boost::shared_ptr<dolfin::CSGGeometry> generateCube(
-           double *points, double *radius = 0);
+           double *points, double *radius=0);
 
     const boost::shared_ptr<dolfin::CSGGeometry> generateCone(
             double *points, double *radius);
@@ -69,14 +74,21 @@ private:
             double *points, double *radius);
 
     void plotGeometry();
+
+    void createGeometry(Geometry *geometry);
     //void createStatusBar();
     //void renderDisplay();
 
-    boost::shared_ptr<dolfin::CSGGeometry> g3d;
+
     GeometryInfo *combinedGeometry;
 
     QWidget *plotWindow;
-    QWidget *window;
+    QWidget *centralWindow;
+
+    QRadioButton *newButton;
+    QRadioButton *unionButton;
+    QRadioButton *differenceButton;
+    QRadioButton *intersectButton;
 
     QLineEdit *formulaBar;
 
@@ -84,11 +96,6 @@ private:
     QAction *boundaryAction;
     QAction *meshAction;
     QAction *exitAction;
-
-    QAction *sphereAction;
-    QAction *cubeAction;
-
-    QLabel *boundaryTypeLabel;
 
     QFrame *buttonFrame;
     QVBoxLayout *boundaryTypeLayout;
@@ -112,9 +119,6 @@ private:
     CoordLabel *world_x_label;
     QPushButton *toggle;
 
-    QRadioButton *unionButton;
-    QRadioButton *differenceButton;
-    QRadioButton *intersectButton;
 
     QGroupBox *geometryOperatorBox;
     QGroupBox *cubeInfoBox;

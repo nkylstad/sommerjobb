@@ -19,18 +19,22 @@ DolfinGui::DolfinGui(QWidget *parent) :
     sphereSelected = false;
     updateRequested = false;
     combinedGeometry = new GeometryInfo();
+    //PythonQt::init();
 }
 //----------------------------------------------------------------------------
 void DolfinGui::createStartLayout()
 {
+    // Create plot window and central window
     plotWindow = new QWidget;
-    window = new QWidget;
+    centralWindow = new QWidget;
     setWindowTitle("DOLFIN Window");
 
-    PythonQt::init();
+    // Set up operator radio buttons
+    newButton = new QRadioButton;
+    newButton->setText(tr("New"));
 
     unionButton = new QRadioButton;
-    unionButton->setText("Union");
+    unionButton->setText(tr("Union"));
 
     differenceButton = new QRadioButton;
     differenceButton->setText(tr("Difference"));
@@ -67,8 +71,8 @@ void DolfinGui::createStartLayout()
     centralLayout->addLayout(plotLayout);
     centralLayout->addLayout(infoLayout);
 
-    window->setLayout(centralLayout);
-    setCentralWidget(window);
+    centralWindow->setLayout(centralLayout);
+    setCentralWidget(centralWindow);
     setMinimumSize(QSize(900,500));
 }
 //----------------------------------------------------------------------------
@@ -99,6 +103,15 @@ const boost::shared_ptr<CSGGeometry> DolfinGui::generateSphere(double *points,
     return boost::shared_ptr<CSGGeometry>(sphere);
 }
 //----------------------------------------------------------------------------
+const boost::shared_ptr<dolfin::CSGGeometry> DolfinGui::generateGeometry(
+       Geometry *geometry){
+    std::cout <<"In method generateGeometry()" << std::endl;
+    if (geometry->getMyType() == "Cube"){
+    std::cout <<"Geometry type was cube!" << std::endl;
+        return generateCube(geometry->getPoints());
+    }
+}
+//----------------------------------------------------------------------------
 void DolfinGui::addInfoBox(QGroupBox *box)
 {
     infoLayout->addWidget(box);
@@ -107,95 +120,143 @@ void DolfinGui::addInfoBox(QGroupBox *box)
 //----------------------------------------------------------------------------
 void DolfinGui::plotGeometry()
 {
-    if (!updateRequested) {
-        for (auto geometry : combinedGeometry->getList())
-            g3d = g3d + geometry->getGeometryPointer();
-    } else {
+    std::cout << "plotGeometry()" << std::endl;
+    boost::shared_ptr<CSGGeometry> g3d;
+    for (auto geometry : combinedGeometry->getList())
+        if (!g3d){
+            g3d = geometry->getGeometryPointer();
+        } else {
+            if ((geometry->getMyOperator()) == "+")
+                g3d = g3d + geometry->getGeometryPointer();
+        }
+        std::cout << "element in list" << std::endl;
 
-    //g3d = g3d + (* combinedGeometry->getList().begin())->getGeometryPointer();
+    std::cout << "Hello" << std::endl;
     plotter->plot(g3d);
-    updateRequested = false;
+}
+//----------------------------------------------------------------------------
+void DolfinGui::createGeometry(Geometry *geometry)
+{
+    if (!(geometry->isCreated())){
+        addInfoBox(geometry->createInfoBox());
+        geometry->setSelected(true);
+
+        if (newButton->isChecked()){
+            combinedGeometry->getList().clear();
+            combinedGeometry->setGeometryCount(0);
+            geometry->setMyOperator("+");
+        } else if (unionButton->isChecked()) {
+            geometry->setMyOperator("+");
+        } else if (differenceButton->isChecked()) {
+            geometry->setMyOperator("-");
+        } else if (intersectButton->isChecked()) {
+            geometry->setMyOperator("*");
+        }
+
+        combinedGeometry->addGeometry(geometry);
+        geometry->setMyIndex(combinedGeometry->getGeometryCount() - 1);
+        std::cout << "My index: " << cube->getMyIndex() << std::endl;
+    }
+
+    geometry->setGeometryPointer(generateGeometry(geometry));
+
+    plotGeometry();
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotCube()
 {
     CubeGeometry *cube = new CubeGeometry(this);
-    plotCube(cube);
+    if (newButton->isChecked()){
+        combinedGeometry->getList().clear();
+        combinedGeometry->setGeometryCount(0);
+        cube->setMyOperator("+");
+    } else if (unionButton->isChecked()){
+        cube->setMyOperator("+");
+    }
+    combinedGeometry->addGeometry(cube);
+    cube->setMyIndex(combinedGeometry->getGeometryCount() - 1);
+    std::cout << "My index: " << cube->getMyIndex() << std::endl;
+
+    for (int i=0; i<6; ++i){
+        std::cout << i << ": " << cube->getPoints()[i] << std::endl;
+    }
+
+    plotGeometry(cube);
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotCube(CubeGeometry *cube)
 {
-    if (!(cube->isCreated())) {
-        // Create default cube
-        //double points[6] = {0,0,0,1,1,1};
-        //cube->setPoints(points);
-        cube->getPoints()[0] = 0;
-        cube->getPoints()[1] = 0;
-        cube->getPoints()[2] = 0;
-        cube->getPoints()[3] = 1;
-        cube->getPoints()[4] = 1;
-        cube->getPoints()[5] = 1;
-        cube->createInfoBox();
-        addInfoBox(cube->getInfoBox());
+    std::cout << "plotCube(cube)" << std::endl;
+    if (!(cube->isCreated())){
+        double points[6] = {0.0, 0.0, 0.0, 1.0, 1.0, 1.0};
+        cube->setPoints(points);
+        addInfoBox(cube->createInfoBox());
         cube->setCreated(true);
     }
-    cube->setGeometryPointer(generateCube(cube->getPoints()));
-    combinedGeometry->addGeometry(cube);
 
-    //g3d = cube->getGeometryPointer();
-    updatePlotWindow();
+    cube->setGeometryPointer(generateCube(cube->getPoints()));
+
     plotGeometry();
-    //plotter->plot(g3d);
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotCone()
 {
     ConeGeometry *cone = new ConeGeometry(this);
+    if (newButton->isChecked()){
+        combinedGeometry->getList().clear();
+        combinedGeometry->setGeometryCount(0);
+        cone->setMyOperator("+");
+    }
+    combinedGeometry->addGeometry(cone);
+    cone->setMyIndex(combinedGeometry->getGeometryCount() - 1);
     plotCone(cone);
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotCone(ConeGeometry *cone)
 {
-    if (!cone->isCreated()){
-        std::cout << "Creating new cone" << std::endl;
-        double points[6] = {0, 0, -1, 0, 0, 1};
-        double radius[2] = {0.5, 0.5};
-        cone->setPoints(points);
-        cone->setRadius(radius);
-        cone->createInfoBox();
-        addInfoBox(cone->getInfoBox());
-        cone->setCreated(true);
-    }
-    cone->setGeometryPointer(generateCone(cone->getPoints(), cone->getRadius()));
-    //g3d = generateCone(cone->getPoints(), cone->getRadius());
-    updatePlotWindow();
-    plotter->plot(generateCone(cone->getPoints(), cone->getRadius()));
+
 
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotSphere()
 {
-    SphereGeometry *sphere = new SphereGeometry(this);
-    plotSphere(sphere);
+
 }
 //----------------------------------------------------------------------------
 void DolfinGui::plotSphere(SphereGeometry *sphere)
 {
-    if (!sphere->isCreated()){
-        int p = sphere->getPointCount();
-        int r = sphere->getRadiusCount();
-        double points[3] = {0.0, 0.0, 0.0};
-        double radius[1] = {0.5};
-        sphere->setPoints(points);
-        sphere->setRadius(radius);
-        sphere->createInfoBox();
-        addInfoBox(sphere->getInfoBox());
-        sphere->setCreated(true);
+
+}
+//----------------------------------------------------------------------------
+void DolfinGui::updateGeometry(Geometry *geometry)
+{
+    // Use python script to obtain values in QLineEdit boxes
+    PythonQt::init();
+    PythonQtObjectPtr mainModule = PythonQt::self()->getMainModule();
+    mainModule.addObject("infoBox", geometry->getInfoBox());
+    double *points = new double[geometry->getPointCount()];
+    double *radius = new double[geometry->getRadiusCount()];
+
+    std::cout << "Points: " << std::endl;
+    for (int i=0; i < geometry->getPointCount(); ++i){
+        points[i] = mainModule.evalScript(QString("eval(infoBox.pointEdit%1.text)").arg(i),
+                Py_eval_input).toDouble();
+        std::cout << i << ": " << points[i] << std::endl;
     }
 
-    sphere->setGeometryPointer(generateSphere(sphere->getPoints(), sphere->getRadius()));
-    g3d = generateSphere(sphere->getPoints(), sphere->getRadius());
-    plotter->plot(g3d);
+    if (geometry->getRadiusCount() > 0){
+        for (int i=0; i < geometry->getRadiusCount(); ++i){
+            radius[i] = mainModule.evalScript(QString("eval(infoBox.radiusEdit%1.text)").arg(i),
+                                              Py_eval_input).toDouble();
+        }
+    }
+
+    geometry->setPoints(points);
+    geometry->setRadius(radius);
+    geometry->setGeometryPointer(generateGeometry(geometry));
+
+    std::cout << "Point count: " << geometry->getPointCount() << std::endl;
+    plotGeometry();
 }
 //----------------------------------------------------------------------------
 void DolfinGui::updateCube(CubeGeometry *cube)
@@ -271,18 +332,7 @@ void DolfinGui::updateSphere(SphereGeometry *sphere){
 //----------------------------------------------------------------------------
 void DolfinGui::updatePlot()
 {
-    std::cout << "In method updatePlot(): \n";
-    std::cout << "-------- HELLO!!! --------" << std::endl;
-    if (cubeSelected){
-        std::cout << "Cube is selected\n";
-        //updateCube();
-    } else if (coneSelected){
-        std::cout << "Cone is selected\n";
-        //updateCone();
-    } else if (sphereSelected){
-        std::cout << "Sphere is selected\n";
-        //updateSphere();
-    }
+
 }
 //----------------------------------------------------------------------------
 void DolfinGui::updatePlotWindow()
@@ -337,24 +387,29 @@ void DolfinGui::domainEditor()
     geometryOperatorBox->setTitle(tr("Operators"));
 
     geometryBoxLayout = new QVBoxLayout();
+    geometryBoxLayout->addWidget(newButton);
     geometryBoxLayout->addWidget(unionButton);
     geometryBoxLayout->addWidget(differenceButton);
     geometryBoxLayout->addWidget(intersectButton);
-    unionButton->setChecked(true);
+    differenceButton->setCheckable(false);
+    intersectButton->setCheckable(false);
+    newButton->setChecked(true);
     geometryOperatorBox->setLayout(geometryBoxLayout);
     geometryOperatorBox->setMaximumHeight(100);
 
     cubePlot = new QPushButton(tr("Plot cube"));
     cubePlot->setMaximumSize(QSize(100,20));
-    connect(cubePlot, SIGNAL(clicked()), this, SLOT(plotCube()));
+    connect(cubePlot, SIGNAL(clicked()), this, SLOT(updatePlot()));
 
     conePlot = new QPushButton(tr("Plot cone"));
     conePlot->setMaximumSize(QSize(100,20));
-    connect(conePlot, SIGNAL(clicked()), this, SLOT(plotCone()));
+    conePlot->setEnabled(false);
+    //connect(conePlot, SIGNAL(clicked()), this, SLOT(updatePlot());
 
     spherePlot = new QPushButton(tr("Plot sphere"));
     spherePlot->setMaximumSize(QSize(100,20));
-    connect(spherePlot, SIGNAL(clicked()), this, SLOT(plotSphere()));
+    spherePlot->setEnabled(false);
+    //connect(spherePlot, SIGNAL(clicked()), this, SLOT(updatePlot()));
 
     sublayout2->addWidget(geometryOperatorBox);
     sublayout2->addWidget(cubePlot);
@@ -365,7 +420,7 @@ void DolfinGui::domainEditor()
     //updateButton->setVisible(true);
     // Create a default start geometry for the plotter
     Box *box = new Box(0,0,0,1,1,1);
-    g3d = boost::shared_ptr<CSGGeometry>(box);
+    boost::shared_ptr<CSGGeometry> g3d = boost::shared_ptr<CSGGeometry>(box);
 
     // Create plotter:
     plotter = new Plotter(g3d);

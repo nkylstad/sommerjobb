@@ -97,10 +97,41 @@ public:
         return guiWindow;
     }
 
+    void setMyOperator(std::string op){
+        myOperator = op;
+    }
+
+    std::string getMyOperator() {
+        return myOperator;
+    }
+
+    void setMyIndex(int i){
+        myListIndex = i;
+    }
+
+    int getMyIndex(){
+        return myListIndex;
+    }
+
+    void setMyType(std::string s) {
+        myType = s;
+    }
+
+    std::string getMyType(){
+        return myType;
+    }
+
     // To be implemented in each geometry
+
     virtual void init(DolfinGui *ui) = 0;
 
-    virtual void createInfoBox() = 0;
+    virtual QGroupBox* createInfoBox() = 0;
+
+    virtual void updateInfoBox() = 0;
+
+    virtual void setDefaultValues() = 0;
+
+
 
     QGroupBox *infoBox;
 
@@ -114,16 +145,23 @@ private:
 
     int pointCount;  // number of points defined in geometry
     int radiusCount;  // number of radius values defined in geometry
+    int myListIndex; // Where the geometry is placed in combined
+                    // geometry list
 
-    double *pointList;
-    double *radiusList;
+    double *pointList;  // List of point values
+    double *radiusList; // List of radius values
 
     boost::shared_ptr<dolfin::CSGGeometry> geometryPointer;
+
+    std::string myOperator;
+    std::string myType;
 
     DolfinGui *guiWindow;
 
     bool created;
     bool selected;
+
+
 
 };
 
